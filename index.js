@@ -11,21 +11,12 @@ var util = require("util");
 var httpServer = createServer(function(req, res) {
   
   
-   datahelp.update('users', "users", (err) => {
-       console.log({name: "node test", description: "TEsting update"}, (err) => {
-           console.log("file update", err)
-       })
-       console.log(err)
-   })
-
+   
   //  datahelp.delete('users', "users", (err) => {
   //      console.log("file deleted succefully", err)
   //  })
 
-  // datahelp.read('users', 'users', (err) => {
-  //   console.log(err)
-  // })
-
+  
   //Get the url and parse it
   var parsedurl = parse(req.url, true);
   var pathname = parsedurl.pathname;
@@ -57,13 +48,26 @@ var httpServer = createServer(function(req, res) {
         password: body.password
       });
 
-      // datahelp.create("users", "users", [user], function(err) {
-      //   var decoder = new stringDecoder("utf-8");
-       
+
+  //     datahelp.readuser('users', 'users', user.id, (err) => {
+  //   console.log(err)
+  //   console.log('hitting read ')
+  // })
+
+
+        datahelp.delete('users', "users", user.id,  (err) => {
+          // console.log({name: "node test", description: "TEsting update"}, (err) => {
+          //     console.log("file update", err)
+          // })
+          console.log(err)
+      })
+
+
+      // datahelp.create("users", "users", [user], function(err) {       
       //   console.log("file creation", err);
       // });
 
-      console.log(buffer);
+      //console.log(buffer);
       var data = {
         trimedPath: trimedPath,
         query: queryString,
