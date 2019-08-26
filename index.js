@@ -11,11 +11,7 @@ var util = require("util");
 var httpServer = createServer(function(req, res) {
   
   
-   
-  //  datahelp.delete('users', "users", (err) => {
-  //      console.log("file deleted succefully", err)
-  //  })
-
+  
   
   //Get the url and parse it
   var parsedurl = parse(req.url, true);
@@ -49,25 +45,29 @@ var httpServer = createServer(function(req, res) {
       });
 
 
-  //     datahelp.readuser('users', 'users', user.id, (err) => {
-  //   console.log(err)
-  //   console.log('hitting read ')
-  // })
+        //     datahelp.readuser('users', 'users', user.id, (err) => {
+       //   console.log(err)
+      //   console.log('hitting read ')
+      // })
 
 
-        datahelp.delete('users', "users", user.id,  (err) => {
-          // console.log({name: "node test", description: "TEsting update"}, (err) => {
-          //     console.log("file update", err)
-          // })
-          console.log(err)
-      })
-
+        // datahelp.delete('users', "users", user.id,  (err) => {
+          // console.log(err)
+      // })
+      // 
 
       // datahelp.create("users", "users", [user], function(err) {       
       //   console.log("file creation", err);
       // });
+      
+      datahelp.update('users', 'users', user.id, body, (err) => {
+        console.log("file update", err)
+      }) 
+    
 
-      //console.log(buffer);
+
+
+
       var data = {
         trimedPath: trimedPath,
         query: queryString,

@@ -1,1 +1,20 @@
-[{"id":11,"name":"Sadiqq fromm the request","email":"isaac@criminal.com","password":"123456789"}]
+[
+    {
+        "id": 12,
+        "name": "Sadiqq fromm the request",
+        "email": "isaac@criminal.com",
+        "password": "123456789"
+    },
+    {
+        "id": 13,
+        "name": "Sadiqq fromm the request",
+        "email": "isaac@criminal.com",
+        "password": "123456789"
+    },
+    {
+        "id": 14,
+        "name": "Sadiqq fromm the request",
+        "email": "isaac@criminal.com",
+        "password": "123456789"
+    }
+]
